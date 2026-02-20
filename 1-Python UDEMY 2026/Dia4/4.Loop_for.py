@@ -1,5 +1,6 @@
 nombres = ["juan","ana","carlos","belen","fran"]
 
+#Imprime lista de nombres uno por uno
 for n in nombres:
     numero_letra = nombres.index(n) + 1
     # print("Hola: " + n)
@@ -14,6 +15,7 @@ for nombre in nombres:
 numeros = [1,2,3,4,5]
 mi_valor = 0
 
+#IMPRIMIO LA LISTA NUMEROS Y FUE SUMANDO CADA UNO
 for x in numeros:
     mi_valor = mi_valor + x
 

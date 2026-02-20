@@ -1,5 +1,5 @@
 lista = [13,57,43,9,87,43]
-print(f"El menor es {min(lista)} y el mayor es {max(lista)}")
+print(f"El numero menor es {min(lista)} y el mayor es {max(lista)}")
 
 nombre = "carlos"
 
