@@ -1,4 +1,5 @@
-
+import os
+os.system("cls")
 lado_menor = float(input("Ingresa el valor del lado menor: "))/100 #B-C
 diagonal_menor = float(input("Ingresa el valor del diagonal menor: "))/100 #C-D
 lado_mayor = float(input("Ingresa el valor del lado mayor: "))/100 #D-A
