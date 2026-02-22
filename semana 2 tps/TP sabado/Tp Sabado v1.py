@@ -29,7 +29,7 @@ elif cantidad_lamparas == 3 and marca == "FelipeLamparas".lower():
 elif cantidad_lamparas == 3:
         descuento = total_sin_descuento * 0.05
 
-descuento = total_sin_descuento * porcentaje_descuento
+# descuento = total_sin_descuento * porcentaje_descuento
 total_con_descuento = total_sin_descuento - descuento
 if total_con_descuento > 4000:
     descuento_extra = total_con_descuento * 0.05
