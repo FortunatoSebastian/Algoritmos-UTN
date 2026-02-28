@@ -3,7 +3,7 @@ os.system("cls")
 
 
 #Entrada
-PRECIO = 1800
+PRECIO = 800
 cantidad_lamparas = int(input("Ingrese cantidad de lamparas: "))
 marca = input("Ingrese marca: ")
 
