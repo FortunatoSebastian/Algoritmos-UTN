@@ -6,8 +6,6 @@ desempeño = input("ingrese su tipo de desempeño (alto/medio/bajo): ")
 print("-"*50)
 horas_estudio = 0
 
-if materias > 5:
-    horas_estudio = 1
 
 if promedio >= 8 and desempeño == "alto":
     horas_estudio = 5
@@ -16,6 +14,8 @@ elif promedio < 8 and desempeño == "medio":
 elif desempeño == "bajo":
     horas_estudio = 10
 
+if materias > 5:
+    horas_estudio += 1
 
 total_de_horas = horas_estudio * materias
 
