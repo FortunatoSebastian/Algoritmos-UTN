@@ -1,3 +1,5 @@
+import os
+os.system("cls")
 nombres = ["juan","ana","carlos","belen","fran"]
 
 #Imprime lista de nombres uno por uno
