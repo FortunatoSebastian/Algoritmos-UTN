@@ -4,7 +4,6 @@ os.system("cls")
 
 usuarios = []
 contraseñas = []
-opciones = ["Registrarse", "Login", "Cerrar Sesion", "Salir"]
 
 def Menu():
     while True: 
@@ -145,8 +144,8 @@ def adivina_el_numero():
 
 def tabla_de_multiplicar():
     os.system("cls")
-    print("Tabla de multiplicar: ")
-    numero = int(input("Ingrese un numero para multiplicar"))
+    print("Tabla de multiplicar")
+    numero = int(input("Ingrese un numero para multiplicar: "))
 
     for n in range(11):
         print(f"{numero} x {n} = {numero * n}")
