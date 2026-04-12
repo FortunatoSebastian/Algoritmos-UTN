@@ -6,9 +6,9 @@
 # Ver el total recaudado — suma todos los totales y lo muestra
 import os
 import csv
-os.system("cls")
 
 def registrar_venta():
+    os.system("cls")
     producto = input("Ingrese el nombre del producto: ")
     cantidad = int(input("Ingrese la cantidad que quiera comprar: "))
     precio_unitario = int(input("Ingrese el precio del producto: "))
@@ -23,12 +23,15 @@ def registrar_venta():
 
 
 def ver_ventas():
+    os.system("cls")
     with open("ventas.csv", "r") as archivo:
         reader = csv.reader(archivo)
         for fila in reader:            
             print(fila)
+    input("\nPresione Enter para volver al menú...")        
 
 def total_recaudado():
+    os.system("cls")
     total = 0
     with open("ventas.csv", "r") as archivo:
         reader = csv.reader(archivo)
@@ -36,9 +39,10 @@ def total_recaudado():
         for fila in reader:
             total += int(fila[3])
     print(f"Total recaudado: ${total}")
-
+    input("\nPresione Enter para volver al menú...")
 def menu():
     while True:
+        os.system("cls")
         print("="*30)
         print("   Sistemas de facturación")
         print("="*30)
