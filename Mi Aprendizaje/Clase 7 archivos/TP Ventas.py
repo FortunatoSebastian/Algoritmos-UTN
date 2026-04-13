@@ -28,7 +28,7 @@ def ver_ventas():
         reader = csv.reader(archivo)
         for fila in reader:            
             print(fila)
-    input("\nPresione Enter para volver al menú...")        
+    input("\nPresione Enter para volver al menú...")
 
 def total_recaudado():
     os.system("cls")
@@ -40,6 +40,7 @@ def total_recaudado():
             total += int(fila[3])
     print(f"Total recaudado: ${total}")
     input("\nPresione Enter para volver al menú...")
+    
 def menu():
     while True:
         os.system("cls")
@@ -50,7 +51,7 @@ def menu():
         print("2 -Ver ventas")
         print("3 -Ver total recaudado")
         print("4 -Salir")
-        opciones = input("Ingrese la opcion deseada: ")
+        opciones = input("\nIngrese la opcion deseada: ")
         match opciones:
             case "1":
                 registrar_venta()
