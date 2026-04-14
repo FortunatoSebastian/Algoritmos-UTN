@@ -1,38 +1,39 @@
 import os
-import csv
+import sqlite3
+
+conexion = sqlite3.connect("ventas.db")
+cursor = conexion.cursor()
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS ventas(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        producto TEXT,
+        cantidad INTEGER,
+        precio INTEGER,
+        total INTEGER)
+""")
 
 def registrar_venta():
     os.system("cls")
     producto = input("Ingrese el nombre del producto: ")
     cantidad = int(input("Ingrese la cantidad que quiera comprar: "))
-    precio_unitario = int(input("Ingrese el precio del producto: "))
+    precio = int(input("Ingrese el precio del producto: "))
 
-    archivo_nuevo = not os.path.exists("ventas.csv")
-
-    with open("ventas.csv", "a", newline="") as archivo:
-        write = csv.writer(archivo)
-        if archivo_nuevo:
-            write.writerow(["nombre", "cantidad", "precio", "total"])
-        write.writerow([producto, cantidad, precio_unitario, cantidad * precio_unitario])
-
+    cursor.execute("INSERT INTO ventas (producto, cantidad, precio, total) VALUES (?, ?, ?, ?)", (producto, cantidad, precio, cantidad * precio))
+    conexion.commit()
 
 def ver_ventas():
     os.system("cls")
-    with open("ventas.csv", "r") as archivo:
-        reader = csv.reader(archivo)
-        for fila in reader:            
-            print(fila)
+    cursor.execute("SELECT * FROM ventas")
+    filas = cursor.fetchall()
+    for fila in filas:
+        print(fila)
     input("\nPresione Enter para volver al menú...")
 
 def total_recaudado():
     os.system("cls")
-    total = 0
-    with open("ventas.csv", "r") as archivo:
-        reader = csv.reader(archivo)
-        next(reader)
-        for fila in reader:
-            total += int(fila[3])
-    print(f"Total recaudado: ${total}")
+    cursor.execute("SELECT SUM(total) FROM ventas")
+    resultado = cursor.fetchone()
+    print(f"Total recaudado: ${resultado[0]}")
     input("\nPresione Enter para volver al menú...")
     
 def menu():
