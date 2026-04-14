@@ -31,9 +31,16 @@ def ver_ventas():
 
 def total_recaudado():
     os.system("cls")
+    cursor.execute("SELECT producto, total FROM ventas")
+    productos = cursor.fetchall()
+    for fila in productos:
+        print(f"{fila[0]}: ${fila[1]}")
+    print("="*30)
+    
     cursor.execute("SELECT SUM(total) FROM ventas")
     resultado = cursor.fetchone()
     print(f"Total recaudado: ${resultado[0]}")
+    
     input("\nPresione Enter para volver al menú...")
     
 def menu():
