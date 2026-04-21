@@ -5,7 +5,7 @@ while continuar == "si":
     usuario = input("Ingrese la clave correcta: ")
     
     if usuario != clave:
-        print("Clave incorrecta. Intentalo denuevo")
+        print("Clave incorrecta. Intentalo de nuevo")
     else:
-        print("La clave es correcta!.")
-        continuar == "no"
+        print("La clave es correcta!")
+        continuar = "no"

@@ -12,6 +12,8 @@ while continuar and intentos > 0:
         print("La Clave es Correcta")
         continuar = False
     else:
-        print("Clave Incorrecta")
         intentos -= 1
-    
+        print(f"Clave Incorrecta. te quedan {intentos} intentos")
+
+if intentos == 0:
+    print("Se acabaron los intentos")

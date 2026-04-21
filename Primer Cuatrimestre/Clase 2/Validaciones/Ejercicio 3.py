@@ -1,10 +1,7 @@
-import random
-clave_secreta = random.randint(1,3)
-usuario = ""
-while usuario != clave_secreta:
-    usuario = int(input("Ingrese un numero del 1 al 10: "))
+nota = int(input("Ingrese una nota (1 a 10): "))
 
-    if usuario != clave_secreta:
-        print("Clave incorrecta")
-    else:
-        print("Usuario correcto")
+while nota < 1 or nota > 10:
+    print("Error. La nota debe estar entre 1 y 10.")
+    nota = int(input("Ingrese una nota (1 a 10): "))
+
+print("Nota válida:", nota)

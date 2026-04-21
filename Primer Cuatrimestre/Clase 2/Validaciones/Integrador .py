@@ -17,11 +17,11 @@ while edad < 18 or edad > 90:
     print("Edad fuera del limite, Reingrese su Edad: ")
     edad = int(input("Reingrese su edad: "))
 
-estado_civil = input("3. Ingrese su Estado Civil [Soltero/a, Casado/a, Divorciado/a, Viudo/a]: ")
+estado_civil = input("3. Ingrese su Estado Civil [Soltero/a, Casado/a, Divorciado/a, Viudo/a]: ").lower()
 # while not estados_civiles:
 while estado_civil != "soltero" and estado_civil != "casado" and estado_civil != "divorciado" and estado_civil != "viudo":
     print("Error: Estado civil no reconocido.")
-    estado_civil = input("Ingrese nuevamente su Estado Civil: ")
+    estado_civil = input("Ingrese nuevamente su Estado Civil: ").lower()
 
 legajo = int(input("4. Ingrese su legajo (Numero de 4 cifras, sin ceros a la iquierda): "))
 while legajo < 1000 or legajo > 9999:
