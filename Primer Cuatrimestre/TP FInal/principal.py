@@ -4,7 +4,6 @@ os.system("cls")
 user = "admin123"
 password = "123"
 inicio_sesion = False
-
 intentos = 3
 #Inicio de Sesion
 while intentos > 0:
