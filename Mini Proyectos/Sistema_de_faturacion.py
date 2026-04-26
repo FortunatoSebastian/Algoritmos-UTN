@@ -6,10 +6,7 @@ productos = [
     ["Tomate", 800, 3000],
     ["Papa", 700, 2000]
 ]
-usuarios = [
-    ["hugo", 60, "si"],
-    ["sebastian", 23, "no"]
-]
+usuarios = []
 
 def Menu_Main():
     while True:
