@@ -5,6 +5,7 @@ user = "admin123"
 password = "123"
 inicio_sesion = False
 intentos = 3
+
 #Inicio de Sesion
 while intentos > 0:
     print("="* 30)
@@ -26,14 +27,13 @@ while intentos > 0:
 
 
 #Menu Principal
-
 if inicio_sesion == True:
     salir = False
     while salir == False:
         os.system("cls")
         print("-----Bienvenido al Sistema de procesamiento de datos-----")
         print("="* 40)
-        print("1- Poyectos")
+        print("1- Proyectos")
         print("2- Tablas")
         print("3- Variables")
         print("4- Mostrar")

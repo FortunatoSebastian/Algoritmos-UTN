@@ -29,6 +29,8 @@ def Menu_Main():
             case "3":
                 print("Saliendo del programa")
                 break
+            case _:
+                print("Error: Opcion invalida...")
 
 def Menu_Gerente():
     while True:
@@ -61,7 +63,7 @@ def Menu_cliente():
         print("║ 1. Registrar usuario ║")
         print("║ 2. Iniciar Compra    ║")
         print("║ 3. Ver Catalogo      ║")
-        print("║ 4. Salir             ║")
+        print("║ 5. Salir             ║")
         print("╚══════════════════════╝")
 
         opciones = input("Ingrese la opcion que necesite: ")
@@ -90,23 +92,16 @@ def Menu_cliente():
                 break
 
 def Mostrar_Usuarios_Registrados():
-    while True:
-        os.system("cls")
+    os.system("cls")
+    print("=" * 35)
+    print("     👤 Clientes Registrados")
+    print("=" * 35)
+    for nombre, edad, tarjeta in usuarios:
+        print(f"    Nombre: {nombre}")
+        print(f"    Edad: {edad}")
+        print(f"    Tiene tarjeta mayorista?: {tarjeta}")
         print("=" * 35)
-        print("     👤 Clientes Registrados")
-        print("=" * 35)
-        for nombre, edad, tarjeta in usuarios:
-            print(f"    Nombre: {nombre}")
-            print(f"    Edad: {edad}")
-            print(f"    Tiene tarjeta mayorista?: {tarjeta}")
-            print("=" * 35)
-        opcion = input("Quieres volver al menu anterior? SI/NO: ")
-        match opcion.lower():
-            case "si":
-                print("Volviendo al Menu anterior")
-                break
-            case _:
-                pass
+    input("Presione Enter para volver al menu anterior...")
 
 def Mostrar_catalogo_Menu():
     while True:
@@ -236,3 +231,4 @@ def Realizar_compra(usuario):
 
 
 Menu_Main()
+

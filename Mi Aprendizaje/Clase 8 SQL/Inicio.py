@@ -12,9 +12,6 @@ cursor.execute("""
         precio INTEGER)
 """)
 
-cursor.execute("INSERT INTO productos (nombre, precio) VALUES (?, ?)", ("Don satur", 1200))
-conexion.commit()
-
 cursor.execute("SELECT * FROM productos")
 filas = cursor.fetchall()
 
